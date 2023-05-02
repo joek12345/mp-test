@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost/itheima_javaweb_test?userSSL=false
+    username: root
+    password: 123456
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 设置 mp 的全局配置
+  global-config:
+    db-config:
+      id-type: auto   # 统一设置主键生成策略
+#      table-prefix: t_  #  指定所有数据表名称的前缀
+  type-aliases-package: com.lazy.pojo  # 配置实体类的类型别名
+  type-enums-package: com.lazy.enums   # 扫描通用枚举的包
+

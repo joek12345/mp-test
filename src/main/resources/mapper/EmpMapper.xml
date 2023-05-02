@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lazy.mapper.EmpMapper">
+    <select id="selectByDeptId" resultType="emp">
+        select id,username,password,name,gender,image,job,entrydate,dept_id,create_time,update_time from emp where dept_id = #{deptId}
+    </select>
+    <delete id="deleteByIdAndDeptId">
+delete from emp
+where
+id = #{id,jdbcType=NUMERIC}
+ AND dept_id = #{deptId,jdbcType=NUMERIC}
+</delete>
+</mapper>
