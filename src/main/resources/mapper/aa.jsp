@@ -16,6 +16,9 @@
 <body>
 <span id="msg" style="display: none">${msg}</span>
 <div class="HD">
+    <p>
+        你好啊~
+    </p>
     <div class="header">
         <div class="header_log">
             <img src="images/wan/header/meishilogo.png">
